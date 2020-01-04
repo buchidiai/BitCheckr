@@ -10,29 +10,7 @@
   <body>
     <h1 class="header">Bit Checkr</h1>
 
-    <h2>Check or Convert Bitcoin value</h2>
-
-    <div class="option">
-      <div class="option-item checked ">
-        <input
-          type="radio"
-          name="check"
-          value="check"
-          onclick="showForm(this)"
-        />
-        Check<br />
-      </div>
-
-      <div class="option-item converted ">
-        <input
-          type="radio"
-          name="convert"
-          value="convert"
-          onclick="showForm(this)"
-        />
-        Convert<br />
-      </div>
-    </div>
+    <h2>Check Bitcoin</h2>
 
     <form class="check-form" action="/check" method="post">
       <div class="pd">
@@ -55,6 +33,9 @@
         <button class="btn" type="submit">Check</button>
       </div>
     </form>
+    <hr />
+
+    <h2>Convert Bitcoin</h2>
 
     <form class="convert-form" action="/convert" method="post">
       <div class="pd">
@@ -81,12 +62,5 @@
         <button class="btn" type="submit">convert</button>
       </div>
     </form>
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="javascript.js"></script>
   </body>
 </html>

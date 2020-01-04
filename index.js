@@ -61,8 +61,9 @@ app.post("/check", (req, res) => {
     }
 
     const data = JSON.parse(body);
-    const price = data.price;
+    const price = data.last;
     const currentDate = data.display_timestamp;
+    console.log(data, "data");
 
     res.write(`<p>The current date is ${currentDate}</p>`);
     res.write(`<h1> The current price of ${coin} is ${price} ${currency}</h1>`);

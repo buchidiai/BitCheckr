@@ -10,18 +10,11 @@ body {
   color: white;
 }
 
-.option {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.option-item {
-  font-size: 1.5rem;
-  color: aliceblue;
-  border-width: 2px;
-  border-color: black;
-  width: 10%;
+hr {
+  border: none;
+  border-top: 10px dotted black;
+  border-color: white;
+  margin: 5%;
 }
 
 .pd {

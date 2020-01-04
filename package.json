@@ -4,7 +4,7 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "node": "nodemon index.js",
+    "node": "nodemon index.js && nodeman /public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

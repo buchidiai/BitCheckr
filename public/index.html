@@ -10,9 +10,31 @@
   <body>
     <h1 class="header">Bit Checkr</h1>
 
-    <h2>Check Bitcoin value</h2>
+    <h2>Check or Convert Bitcoin value</h2>
 
-    <form action="/" method="post">
+    <div class="option">
+      <div class="option-item checked ">
+        <input
+          type="radio"
+          name="check"
+          value="check"
+          onclick="showForm(this)"
+        />
+        Check<br />
+      </div>
+
+      <div class="option-item converted ">
+        <input
+          type="radio"
+          name="convert"
+          value="convert"
+          onclick="showForm(this)"
+        />
+        Convert<br />
+      </div>
+    </div>
+
+    <form class="check-form" action="/check" method="post">
       <div class="pd">
         <select name="crypto" class="select-css pd">
           <option value="BTC">Bitcoin</option>
@@ -30,8 +52,41 @@
       </div>
 
       <div class="submit">
-        <button class="btn" type="submit">Submit</button>
+        <button class="btn" type="submit">Check</button>
       </div>
     </form>
+
+    <form class="convert-form" action="/convert" method="post">
+      <div class="pd">
+        <select name="crypto" class="select-css pd">
+          <option value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
+          <option value="LTC">Litecoin</option>
+        </select>
+      </div>
+
+      <div class="pd">
+        <select name="fiat" class="select-css pd">
+          <option value="USD">US Dollars</option>
+          <option value="GBP">GB Pounds</option>
+          <option value="EUR">EU Euros</option>
+        </select>
+      </div>
+
+      <div class="pd">
+        <input type="text" name="amount" value="" placeholder="Amount" />
+      </div>
+
+      <div class="submit">
+        <button class="btn" type="submit">convert</button>
+      </div>
+    </form>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript.js"></script>
   </body>
 </html>
